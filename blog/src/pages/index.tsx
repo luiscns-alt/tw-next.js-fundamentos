@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import useIndex from '../data/hooks/pages/useIndex.page';
 import styles from '../ui/styles/Home.module.css';
 
 const Home: NextPage = () => {
+    const { posts } = useIndex();
     return (
         <div className={styles.container}>
             <Head>
@@ -14,6 +16,7 @@ const Home: NextPage = () => {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
+            <main></main>
         </div>
     );
 };
